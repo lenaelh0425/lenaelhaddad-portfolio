@@ -1,0 +1,450 @@
+h1 {
+    color: #000000;
+    font-size: 4rem; 
+    font-weight: 50;
+    text-align: center;
+    margin: 1rem 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+h4 { 
+    color: #000000;
+    font-size: 4rem; 
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+h3 { 
+    color: #5a0d0d;
+    font-size: 1rem; 
+    font-weight: lighter;
+    text-align: center;
+    margin: 0.5rem 0;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+h5 { 
+    color: #ffffff;
+    font-size: 1rem; 
+    font-weight: lighter;
+    text-align: center;
+    margin: 0.5rem 0;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+h6 { 
+    color: #818181;
+    font-size: 1.2rem; 
+    font-weight: lighter;
+    text-align: left;
+    margin: 0.5rem 0;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+h7 { 
+    color: #000000;
+    font-size: 1.3rem; 
+    font-weight: bold;
+    text-align: left;
+    margin: 0.5rem 0;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+h8 { 
+    display: block;
+    color: #5a0d0d;
+    font-size: 1rem; 
+    font-weight: bold;
+    text-align: left;
+    margin: 0.5rem 0;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+h9 { 
+    display: block;
+    color: #5a0d0d;
+    font-size: 1rem; 
+    font-weight: bold;
+    text-align: right;
+    margin: 1rem 0;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+h10 { 
+    display: block;
+    color: #5a0d0d;
+    font-size: 1rem; 
+    font-weight: light;
+    text-align: left;
+    margin: 0.5rem 0;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    
+    
+}
+p {
+    color: #5a0d0d;
+    font-size: 1.2rem; 
+    text-align: center;
+    margin: 1rem 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p1 {
+    color: #000000;
+    font-size: 1.1rem; 
+    font-weight: bolder;
+    text-align: center;
+    margin: 1rem 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+img {
+    border-radius: 10px;
+    width: 40cm;
+    height: 25cm
+
+  }
+
+/* Navigation layout */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and buttons */
+    padding: 10px 20px;
+}
+
+/* Logo on the left */
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo {
+    height: 60px;
+    width: auto;
+}
+
+/* Buttons grouped on the right */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Button styles */
+nav button {
+    color: white;
+    background-color: #5a0d0d;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: #a3a3a3;
+}
+
+
+
+h2 {
+    color: #000000;
+    font-size: 1.7rem;
+    font-weight: 100;
+    text-align: left;
+    margin: 1rem auto; /* Center the heading horizontally */
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 1200px; /* Same width as the grid */
+    padding: 0 20px; /* Add some padding for better alignment */
+}
+
+
+
+/* Center the grid on the page */
+.grid-container {
+    display: flex;
+    justify-content: center;  /* Horizontally centers the grid */
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Center the grid itself */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center; /* Ensure items inside grid are centered */
+    max-width: 1200px; /* Adjust the width to control layout size */
+    width: 100%;
+}
+
+/* Ensure the image takes full width but doesn't crop */
+.card img {
+    display: block;         /* Remove inline gaps */
+    width: 100%;            /* Use the full width of the card */
+    height: auto;           /* Keep the aspect ratio intact */
+    object-fit: unset;      /* No cropping */
+    max-height: none;       /* Remove any height restrictions */
+    max-width: none;        /* Remove width restrictions */
+}
+
+/* Make sure the card adapts to the content */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 400px;           /* Example size - adjust as needed */
+    padding: 18px;
+}
+
+
+/* Remove underline from links */
+a {
+    text-decoration: none; /* No underline by default */
+}
+
+
+/* Hover effect */
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+/* Card content */
+.card-content a {
+    padding: 1rem;
+    text-align: center;
+    flex: 1;
+    text-decoration: none;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #5a0d0d;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Flex layout for the two sections */
+.project-details {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: flex-start;  
+    gap: 10px;                  /* Space between columns */
+    padding: 20px;
+}
+
+
+/* Right content styles */
+.right-content {
+    flex: 1;
+    text-align: left;
+    transform: translateX(-30px); /* Move content left */
+    margin-top: 0;
+}
+.left-content {
+    flex: 1;
+    text-align: left;
+    transform: translateX(30px); /* Move content left */
+    margin-top: 0;
+}
+
+.right-again {
+    flex: 1; /* Keeps it aligned properly */
+    text-align: left; /* Ensure text stays left-aligned */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 500px; /* ✅ Limits how far the text stretches */
+    transform: translateX(-160px); /* ✅ Moves text slightly to the left */
+}
+
+
+
+
+/* Detail values */
+.detail-value {
+    color: #818181;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+/* Remove excessive margins */
+body, section, div {
+    margin: 0;
+    padding: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Center both images */
+    gap: 20px;              /* Add space between the images */
+}
+
+.pamphlet-image {
+    max-width: 600px;  /* Adjust width as needed */
+    height: auto;
+    display: block;
+}
+.post-image {
+    max-width: 350px;  /* Adjust width as needed */
+    height: auto;
+    display: block;
+}
+
+.app-image {
+    max-width: 1200px;  /* Adjust the width as needed */
+    height: auto;      /* Keep the aspect ratio */
+    display: block;
+    margin: 0 auto;    /* Center the image */
+}
+.other-pamphlet-image {
+    max-width: 800px;  /* Adjust the width as needed */
+    height: auto;      /* Keep the aspect ratio */
+    display: block;
+    margin: 0 auto;    /* Center the image */
+}
+.poster-image {
+    max-width: 2000px;  /* Adjust the width as needed */
+    height: auto;      /* Keep the aspect ratio */
+    display: block;
+    margin: 0 auto;    /* Center the image */
+}
+.reel-container {
+    display: flex;
+    justify-content: center; /* Centers the reels */
+    gap: 20px; /* Adds space between them */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.instagram-media {
+    max-width: 350px; /* Adjust width to fit side by side */
+}
+.video-container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically (if needed) */
+    width: 100%;              /* Makes sure it spans the full width */
+    margin-top: 20px;         /* Adds spacing if necessary */
+}
+
+video {
+    width: 80%;  /* Increase this percentage to make the video larger */
+    max-width: 1200px; /* Ensures it doesn't get too big */
+    height: auto; /* Keeps aspect ratio */
+}
+
+.about-me {
+    max-width: 400px;  /* Adjust the width as needed */
+    height: auto;      /* Keep the aspect ratio */
+    display: block;
+    margin: 0 auto;    /* Center the image */ 
+    border-radius: 70px;
+}
+.pro-details {
+    display: flex;
+    justify-content: flex-start; /* Aligns everything to the left */
+    align-items: center; /* Aligns items to the same vertical line */
+    gap: 200px;  /* ✅ Reduce space between the image and text */
+    padding: 20px;
+}
+/* Contact form container */
+.contact-form {
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #d1d1d1; /* Matches the background color in the image */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Form title */
+.contact-form h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form inputs */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Placeholder text style */
+.contact-form textarea::placeholder {
+    color: #7a7a7a;
+}
+
+/* Submit button */
+.contact-form button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100px;
+}
+
+/* Hover effect */
+.contact-form button:hover {
+    background-color: #333;
+}
+.google-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Adjust height based on page layout */
+    width: 100%;
+}
+.email-link {
+    display: flex;
+    align-items: center;
+    font-size: 18px; /* Adjust size */
+    color: #666; /* Adjust color */
+    text-decoration: none; /* Remove default underline */
+    border-bottom: 1px solid #666; /* Custom underline */
+    padding-bottom: 2px; /* Spacing */
+    width: fit-content; /* Keep underline only under text */
+}
+
+.email-link:hover {
+    color: #000; /* Darker on hover */
+    border-bottom: 1px solid #000; /* Darker underline on hover */
+}
+.email-link {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    text-decoration: none;
+    margin-top: 20px; /* Adjust spacing */
+}
+
+.email-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+

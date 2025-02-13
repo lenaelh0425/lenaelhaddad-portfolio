@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="thumbnails/heart.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<header>
+    <nav>
+        <a href="portfolio.html" class="logo-link">
+            <img src="thumbnails/heart.png" alt="Home" class="logo">
+        </a>
+        <div class="nav-buttons">
+            <button onclick="scrollToSection('projects')">My Projects</button>
+            <a href="aboutme.html"><button>About Me</button></a>
+            <a href="contactme.html"><button>Contact</button></a>
+        </div>
+    </nav>
+</header>
+
+<hr>
+<br>
+<br>
+<br>
+<body>
+    <header>
+        <h1>Nice to meet you!</h1><h4>I'm Lena.</h4>
+    </header>
+    <p>Don't be shy, you can go through my work below.</p>
+<br>
+<br>
+
+
+ 
+ <section id="projects">
+    <div class="grid-container">
+        <div class="grid">
+            <a href="adobeCreations.html" class="card-link">
+                <div class="card">
+                    <img src="thumbnails/adobethumb.png" alt="Adobe">
+                    <div class="card-content">
+                        <h3>Multimedia Design</h3>
+                        <p1>Agriculture and Food Museum</p1>
+                    </div>
+                </div>
+            </a>
+
+            <a href="carletonleb.html" class="card-link">
+                <div class="card">
+                    <img src="thumbnails/clssthumb.png" alt="Lebanese Student Society">
+                    <div class="card-content">
+                        <h3>Social Media Managing</h3>
+                        <p1>Carleton Lebanese Student Society</p1>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="municipal.html" class="card-link">
+                <div class="card">
+                    <img src="thumbnails/websitethumb.png" alt="App">
+                    <div class="card-content">
+                        <h3>Website Design</h3>
+                        <p1>Ottawa's Municipality System</p1>
+                    </div>
+                </div>
+            </a>
+
+            <a href="chef.html" class="card-link">
+                <div class="card">
+                    <img src="thumbnails/ricthumb.png" alt="Documentary">
+                    <div class="card-content">
+                        <h3>Videography</h3>
+                        <p1>Chef Ric's</p1>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+ <footer>
+    <h5>&copy; Designed and Coded by Lena El Haddad. All Rights Reserved.</h5>
+</footer>
+
+<script>
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+        
+  
+   
+</body>
+</html>
