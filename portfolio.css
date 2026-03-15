@@ -6,6 +6,7 @@ h1 {
     margin: 1rem 0;
     font-family: 'Times New Roman', Times, serif;
 }
+
 h4 { 
     color: #000000;
     font-size: 4rem; 
@@ -13,8 +14,8 @@ h4 {
     text-align: center;
     margin: 1rem 0;
     font-family: 'Times New Roman', Times, serif;
-    
 }
+
 h3 { 
     color: #5a0d0d;
     font-size: 1rem; 
@@ -22,7 +23,6 @@ h3 {
     text-align: center;
     margin: 0.5rem 0;
     font-family: 'Times New Roman', Times, serif;
-    
 }
 
 h5 { 
@@ -32,8 +32,8 @@ h5 {
     text-align: center;
     margin: 0.5rem 0;
     font-family: 'Times New Roman', Times, serif;
-    
 }
+
 h6 { 
     color: #818181;
     font-size: 1.2rem; 
@@ -41,17 +41,18 @@ h6 {
     text-align: left;
     margin: 0.5rem 0;
     font-family: 'Times New Roman', Times, serif;
-    
 }
+
 h7 { 
+    display: block;
     color: #000000;
     font-size: 1.3rem; 
     font-weight: bold;
     text-align: left;
     margin: 0.5rem 0;
     font-family: 'Times New Roman', Times, serif;
-    
 }
+
 h8 { 
     display: block;
     color: #5a0d0d;
@@ -60,8 +61,8 @@ h8 {
     text-align: left;
     margin: 0.5rem 0;
     font-family: 'Times New Roman', Times, serif;
-    
 }
+
 h9 { 
     display: block;
     color: #5a0d0d;
@@ -70,8 +71,8 @@ h9 {
     text-align: right;
     margin: 1rem 0;
     font-family: 'Times New Roman', Times, serif;
-    
 }
+
 h10 { 
     display: block;
     color: #5a0d0d;
@@ -81,9 +82,8 @@ h10 {
     margin: 0.5rem 0;
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.5;
-    
-    
 }
+
 p {
     color: #5a0d0d;
     font-size: 1.2rem; 
@@ -93,6 +93,7 @@ p {
 }
 
 p1 {
+    display: block;
     color: #000000;
     font-size: 1.1rem; 
     font-weight: bolder;
@@ -100,18 +101,18 @@ p1 {
     margin: 1rem 0;
     font-family: 'Times New Roman', Times, serif;
 }
+
 img {
     border-radius: 10px;
-    width: 40cm;
-    height: 25cm
-
-  }
+    max-width: 100%;
+    height: auto;
+}
 
 /* Navigation layout */
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between logo and buttons */
+    justify-content: space-between;
     padding: 10px 20px;
 }
 
@@ -150,82 +151,87 @@ nav button:hover {
     background-color: #a3a3a3;
 }
 
-
-
 h2 {
     color: #000000;
     font-size: 1.7rem;
     font-weight: 100;
     text-align: left;
-    margin: 1rem auto; /* Center the heading horizontally */
+    margin: 1rem auto;
     font-family: 'Times New Roman', Times, serif;
-    max-width: 1200px; /* Same width as the grid */
-    padding: 0 20px; /* Add some padding for better alignment */
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
-
-
-/* Center the grid on the page */
+/* Center the full projects section */
 .grid-container {
     display: flex;
-    justify-content: center;  /* Horizontally centers the grid */
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    justify-content: center;
     padding: 20px;
 }
 
-/* Center the grid itself */
+/* Centered top animation card */
+.top-center-card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.top-center-card .card {
+    width: 400px;
+}
+
+/* Main 2-column grid */
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-items: center; /* Ensure items inside grid are centered */
-    max-width: 1200px; /* Adjust the width to control layout size */
+    gap: 20px 40px;
+    justify-items: center;
+    max-width: 1200px;
     width: 100%;
 }
 
-/* Ensure the image takes full width but doesn't crop */
+/* Card image */
 .card img {
-    display: block;         /* Remove inline gaps */
-    width: 100%;            /* Use the full width of the card */
-    height: auto;           /* Keep the aspect ratio intact */
-    object-fit: unset;      /* No cropping */
-    max-height: none;       /* Remove any height restrictions */
-    max-width: none;        /* Remove width restrictions */
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+    max-height: none;
+    max-width: none;
 }
 
-/* Make sure the card adapts to the content */
+/* Card styling */
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 400px;           /* Example size - adjust as needed */
+    width: 400px;
     padding: 18px;
+    transition: transform 0.3s ease;
 }
-
 
 /* Remove underline from links */
 a {
-    text-decoration: none; /* No underline by default */
+    text-decoration: none;
 }
-
 
 /* Hover effect */
 .card:hover {
     transform: scale(1.05);
 }
 
-
 /* Card content */
-.card-content a {
+.card-content {
     padding: 1rem;
     text-align: center;
     flex: 1;
-    text-decoration: none;
 }
 
-
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
@@ -239,38 +245,33 @@ footer {
 /* Flex layout for the two sections */
 .project-details {
     display: flex;
-    justify-content: flex-start; /* Align content to the left */
+    justify-content: flex-start;
     align-items: flex-start;  
-    gap: 10px;                  /* Space between columns */
+    gap: 10px;
     padding: 20px;
 }
-
 
 /* Right content styles */
 .right-content {
     flex: 1;
     text-align: left;
-    transform: translateX(-30px); /* Move content left */
+    transform: translateX(-30px);
     margin-top: 0;
 }
+
 .left-content {
     flex: 1;
     text-align: left;
-    transform: translateX(30px); /* Move content left */
+    transform: translateX(30px);
     margin-top: 0;
 }
 
 .right-again {
-    flex: 1; /* Keeps it aligned properly */
-    text-align: left; /* Ensure text stays left-aligned */
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    max-width: 500px; /* ✅ Limits how far the text stretches */
-    transform: translateX(-160px); /* ✅ Moves text slightly to the left */
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+    transform: translateX(-160px);
 }
-
-
 
 
 /* Detail values */
@@ -288,83 +289,90 @@ body, section, div {
 
 .image-container {
     display: flex;
-    justify-content: center; /* Center both images */
-    gap: 20px;              /* Add space between the images */
+    justify-content: center;
+    gap: 20px;
 }
 
 .pamphlet-image {
-    max-width: 600px;  /* Adjust width as needed */
+    max-width: 600px;
     height: auto;
     display: block;
 }
+
 .post-image {
-    max-width: 350px;  /* Adjust width as needed */
+    max-width: 350px;
     height: auto;
     display: block;
 }
 
 .app-image {
-    max-width: 1200px;  /* Adjust the width as needed */
-    height: auto;      /* Keep the aspect ratio */
+    max-width: 1200px;
+    height: auto;
     display: block;
-    margin: 0 auto;    /* Center the image */
+    margin: 0 auto;
 }
+
 .other-pamphlet-image {
-    max-width: 800px;  /* Adjust the width as needed */
-    height: auto;      /* Keep the aspect ratio */
+    max-width: 800px;
+    height: auto;
     display: block;
-    margin: 0 auto;    /* Center the image */
+    margin: 0 auto;
 }
+
 .poster-image {
-    max-width: 2000px;  /* Adjust the width as needed */
-    height: auto;      /* Keep the aspect ratio */
+    max-width: 2000px;
+    height: auto;
     display: block;
-    margin: 0 auto;    /* Center the image */
+    margin: 0 auto;
 }
+
 .reel-container {
     display: flex;
-    justify-content: center; /* Centers the reels */
-    gap: 20px; /* Adds space between them */
-    flex-wrap: wrap; /* Ensures responsiveness */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .instagram-media {
-    max-width: 350px; /* Adjust width to fit side by side */
+    max-width: 350px;
 }
+
 .video-container {
     display: flex;
-    justify-content: center;  /* Centers horizontally */
-    align-items: center;      /* Centers vertically (if needed) */
-    width: 100%;              /* Makes sure it spans the full width */
-    margin-top: 20px;         /* Adds spacing if necessary */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
 }
 
 video {
-    width: 80%;  /* Increase this percentage to make the video larger */
-    max-width: 1200px; /* Ensures it doesn't get too big */
-    height: auto; /* Keeps aspect ratio */
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
 }
 
 .about-me {
-    max-width: 400px;  /* Adjust the width as needed */
-    height: auto;      /* Keep the aspect ratio */
+    max-width: 400px;
+    height: auto;
     display: block;
-    margin: 0 auto;    /* Center the image */ 
+    margin: 0 auto;
     border-radius: 70px;
 }
+
 .pro-details {
     display: flex;
-    justify-content: flex-start; /* Aligns everything to the left */
-    align-items: center; /* Aligns items to the same vertical line */
-    gap: 200px;  /* ✅ Reduce space between the image and text */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 200px;
     padding: 20px;
 }
+
 /* Contact form container */
 .contact-form {
     max-width: 400px;
     margin: 50px auto;
     text-align: center;
-    background-color: #d1d1d1; /* Matches the background color in the image */
+    background-color: #d1d1d1;
     padding: 30px;
     border-radius: 10px;
 }
@@ -377,7 +385,8 @@ video {
 }
 
 /* Form inputs */
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -410,35 +419,30 @@ video {
 .contact-form button:hover {
     background-color: #333;
 }
+
 .google-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; /* Adjust height based on page layout */
+    height: 80vh;
     width: 100%;
 }
-.email-link {
-    display: flex;
-    align-items: center;
-    font-size: 18px; /* Adjust size */
-    color: #666; /* Adjust color */
-    text-decoration: none; /* Remove default underline */
-    border-bottom: 1px solid #666; /* Custom underline */
-    padding-bottom: 2px; /* Spacing */
-    width: fit-content; /* Keep underline only under text */
-}
 
-.email-link:hover {
-    color: #000; /* Darker on hover */
-    border-bottom: 1px solid #000; /* Darker underline on hover */
-}
 .email-link {
     display: block;
     text-align: center;
     font-size: 18px;
     color: #666;
     text-decoration: none;
-    margin-top: 20px; /* Adjust spacing */
+    margin-top: 20px;
+    border-bottom: 1px solid #666;
+    padding-bottom: 2px;
+    width: fit-content;
+}
+
+.email-link:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
 }
 
 .email-container {
@@ -448,3 +452,19 @@ video {
     margin-top: 20px;
 }
 
+.resume-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background-color: #5a0d0d;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.resume-button:hover {
+    background-color: #a3a3a3;
+}
